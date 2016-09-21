@@ -1,0 +1,13 @@
+{
+  "altura": {
+    "cc": "igualdad"
+  },
+  "material":{
+    "cc": "conjunto",
+    "payload": [["plastico"],["madera", "metal", "cristal"]]
+  },
+  "precio":{
+    "cc": "intervalo",
+    "payload": [[1200, 1300]]
+  }
+}

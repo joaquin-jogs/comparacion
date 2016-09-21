@@ -1,0 +1,5 @@
+{
+  "altura": ["baja", "normal", "alta"],
+  "material": ["madera", "plastico", "metal", "cristal"],
+  "precio": [1000, 15000]
+}
