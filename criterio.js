@@ -3,6 +3,8 @@ const igualdad = require('./igualdad')
 const umbral = require('./umbral')
 const conjunto = require('./conjunto')
 
+const Semejanza = require('./Semejanza')
+
 class Criterio {
   constructor (schema, criterio) {
     if (this._valid(schema, criterio)) {
@@ -57,9 +59,17 @@ class Criterio {
 }
 let schema = require('./esquema.json')
 let comparacion = require('./comparacion.json')
+let semejanza = require('./semejanza.json')
 let cmp = new Criterio(schema, comparacion)
+let fs = new Semejanza(semejanza)
 
 let o1 = require('./o1.json')
 let o2 = require('./o2.json')
 
-console.log(cmp.compare(o1, o2))
+let resultado = cmp.compare(o1, o2)
+let sem = fs.rank(resultado)
+
+console.log({
+  Comparacion: resultado,
+  Semejanza: sem
+})
